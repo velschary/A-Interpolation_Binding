@@ -1,0 +1,45 @@
+<div class="center">
+  <input type="text" [(ngModel)]="title"/><h1>{{title}}</h1><!--interpolation binding the value from the ts file-->
+
+  <h1>{{array}}</h1><!--we can direct interpolate array all the vlaues assined to that element-->
+
+  <li>
+    {{array[0]}}
+  </li>
+  <li>{{array[1]}}</li>
+  <li>{{array[2]}}</li>
+  <li>{{array[3]}}</li>
+
+  <h3 *ngFor="let array of array">{{array}}</h3> <!--*ngFor used like mapping method,
+                                      all the values assigned to let array variable-->
+
+  <h2 *ngFor="let object of object">{{object.name}}--{{object.age}}</h2><!--*ngFor used like mapping method,
+                                                          all the values assigned to let array variable-->
+</div>
+
+FirstName:-<input type="text" [(ngModel)]="firstName"/><br/><br/><!--*ngFor and ngModel both diff
+                                    ngModel need to import to our moduel.ts import section from forms-->
+LastName:-<input type="text" [(ngModel)]="lastName"/><br/><br/>
+Gender:-<input type="radio" [(ngModel)]='gender' value="male"/>Male
+        <input type="radio" [(ngModel)]='gender' value="female"/>Female
+        <input type="radio" [(ngModel)]='gender' value="other"/>Other<br /><br />
+Area:-<select [(ngModel)]='area'>
+  <option></option>
+  <option>Peddapalli</option>
+  <option>Karimnagar</option>
+</select><br /><br />
+
+<h1>FirstName -- {{firstName}}</h1>
+<h1>LastName -- {{lastName}}</h1>
+<h1>Gender -- {{gender}}</h1>
+<h1>Area -- {{area}}</h1>
+
+TO-DO LIST:-<input type="text" [(ngModel)]="todoVar"/>&nbsp;
+<button (click)="addTodo()">ADD-TODO</button>
+
+<h4 *ngFor="let TL of todoList let i=index">{{TL}}<button (click)="deleteFun(i)">DELETE</button></h4><br/><br/>
+
+For Value--<button *ngFor="let Btn of BtnArray" (click)="btnfun(Btn)">{{Btn}}</button><br/><br/>
+
+For index value--<button *ngFor="let Btn of BtnArray let i=index" (click)="indexfun(i)">{{Btn}}</button>
+ 
