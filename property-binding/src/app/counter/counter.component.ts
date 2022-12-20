@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./counter.component.css']
 })
 export class CounterComponent implements OnInit{
-@Input() val:any
+@Input() val:any  //receving prop from parent component and receiving in child as input 
 @Input() add:any
 count:any
   ngOnInit(): void {

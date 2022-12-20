@@ -1,2 +1,6 @@
-  <app-counter val="5" add="5"></app-counter>
-  <app-counter val="10" add="10"></app-counter>
+<div class="appclass">
+  <h1>from app component</h1>
+  <app-parent [x]="title"></app-parent><!--if we use lhs as [] expresion && using normal means string-->
+</div>
+<app-counter val="5" add="5"></app-counter> <!--passing prop to counter component-->
+<app-counter val="10" add="10"></app-counter> 
