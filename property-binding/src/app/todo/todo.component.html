@@ -1,0 +1,6 @@
+todo::<input type="text" />
+<h3 *ngFor="let todo of todovalues" [class]="todo.gender==='male'?'male':'female'">
+    <div [class]="todo.status===true?'online':'offline'"></div>
+    {{todo.name}}
+    <img [src]="todo.gender==='male'?'https://thumbs.dreamstime.com/b/unknown-man-profile-avatar-vector-male-office-icon-potrait-175425661.jpg':'https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png'"/>
+</h3>

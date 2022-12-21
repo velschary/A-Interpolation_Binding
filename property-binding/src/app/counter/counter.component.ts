@@ -19,4 +19,6 @@ inc(){
 dec(){
   this.count=Number(this.count)-Number(this.add)
 }
+
+value = 122
 }

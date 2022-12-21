@@ -1,0 +1,48 @@
+<h4>title---->{{title}}</h4>
+<h4>name------>{{name}}</h4>
+<h4>name in uppercase-->{{name|uppercase}}</h4>
+<h4>name in lowercase-->{{name|lowercase}}</h4>
+<h4>salary----->{{salary}}</h4>
+<h4>salary in currency--->{{salary|currency}}</h4>
+<h4>INR indisn rupee---->{{salary|currency:'INR'}}</h4>
+<h4>salary----->{{salary}}</h4>
+<h4>salary number----->{{salary|number}}</h4>
+<h4>salary number . before 9----->{{salary|number:'9.2-4'}}</h4>
+<h4>{{today}}</h4>
+<h4>date format-->{{today|date}}</h4>
+<table border="2px" cellpadding="1">
+  <thead>
+    <tr>
+      <td>S.NO</td>
+      <td (click)="sortName()">NAME</td>
+      <td (click)="sortAge()">AGE</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<br/><br/>
+
+<table border="2px" cellpadding="1">
+  <thead>
+    <tr>
+      <td>S.NO</td>
+      <td (click)="key='name'">NAME</td>
+      <td (click)="key='age'">AGE</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of pipestudents|sort:key; let i=index">
+      <td>{{i+1}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+    </tr>
+  </tbody>
+</table>
+

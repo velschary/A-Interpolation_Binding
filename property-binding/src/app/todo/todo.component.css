@@ -1,0 +1,24 @@
+.male{
+    color: black;
+}
+.female{
+    color: pink;
+}
+img{
+    height: 30px;
+    width: 30px;
+}
+.online{
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    display: inline-block;
+    border-radius: 100%;
+}
+.offline{
+    height: 20px;
+    width: 20px;
+    background-color:black;
+    display: inline-block;
+    border-radius: 100%;
+}
