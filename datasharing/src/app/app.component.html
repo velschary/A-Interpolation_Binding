@@ -1,0 +1,5 @@
+<div class="appclass">
+  <h1>App Component</h1>
+  <button (click)="appFun()">call-app</button> <!--parent function calling from parent itself-->
+  <app-todolist (childevent)="appFun()"></app-todolist>
+</div>

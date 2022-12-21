@@ -1,0 +1,12 @@
+<div class="todolistclass">
+    <h1>Todolist Component</h1>
+
+    <button (click)="callingMethod()">call app from todolist</button><br/><br/>
+
+    <input type="text" [(ngModel)]="value" />&nbsp;
+    <button (click)="addtodo()">ADD TODO</button><br/><br/>
+
+    <h4 *ngFor="let val of values;let i=index">
+        <app-todos [val]="val" [index]="i" (click)="deletetodo(i)"></app-todos>
+    </h4>
+</div>
