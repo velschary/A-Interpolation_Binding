@@ -9,4 +9,11 @@
     <h4 *ngFor="let val of values;let i=index">
         <app-todos [val]="val" [index]="i" (click)="deletetodo(i)"></app-todos>
     </h4>
+    <br><br>
+    <input type="number" [(ngModel)]="firstVal" /><br><br>
+    <input type="number" [(ngModel)]="secondVal" />
+    <h4>{{resultValue}}</h4>
+    <button (click)="add()">ADDITON</button>&nbsp;
+    <button (click)="sub()">SUBSTRACTION</button>&nbsp; 
+    <button (click)="mul()">MULTIPLICATION</button>
 </div>
